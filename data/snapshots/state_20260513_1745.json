@@ -1,0 +1,138 @@
+{
+  "snapshot_time": "2026-05-13T17:45:00+08:00",
+  "account": {
+    "total_capital": 3622.0,
+    "cash": 2389.0,
+    "total_assets": 3633.0,
+    "unrealized_pnl": 11.0
+  },
+  "positions": [
+    {
+      "name": "大唐发电",
+      "code": "601991",
+      "shares": 100,
+      "cost": 7.26,
+      "current": 7.37,
+      "pnl_pct": 1.5,
+      "pnl_amt": 11,
+      "signals": {
+        "rsi": 89.8,
+        "kdj_j": 108.2,
+        "boll_pos_pct": 119,
+        "consecutive_limit_up": 6,
+        "momentum_5d": 46.2,
+        "sector": "火力发电(BK1377)",
+        "sector_rank": 21,
+        "decision": "HOLD_tight_stop",
+        "stop_loss": 7.2
+      }
+    },
+    {
+      "name": "滨化股份",
+      "code": "601678",
+      "shares": 100,
+      "cost": 5.07,
+      "current": 5.07,
+      "pnl_pct": 0.0,
+      "pnl_amt": 0,
+      "signals": {
+        "rsi": 47.3,
+        "kdj_j": -0.1,
+        "boll_pos_pct": 34,
+        "momentum_5d": -0.6,
+        "trend": "震荡偏空",
+        "decision": "SELL_at_open"
+      }
+    }
+  ],
+  "sector_capital_flow_top10": [
+    {
+      "rank": 1,
+      "sector": "电子(BK1201)",
+      "net_inflow_b": 218.4,
+      "change_pct": 2.39
+    },
+    {
+      "rank": 2,
+      "sector": "消费电子(BK1037)",
+      "net_inflow_b": 123.1,
+      "change_pct": 2.56
+    },
+    {
+      "rank": 3,
+      "sector": "消费电子零部件(BK1338)",
+      "net_inflow_b": 120.4,
+      "change_pct": 2.47
+    },
+    {
+      "rank": 6,
+      "sector": "其他电源设备Ⅱ(BK1034)",
+      "net_inflow_b": 50.6,
+      "change_pct": 4.8
+    },
+    {
+      "rank": 11,
+      "sector": "电力(BK0428)",
+      "net_inflow_b": 34.0,
+      "change_pct": 2.8
+    },
+    {
+      "rank": 12,
+      "sector": "其他电源设备Ⅲ(BK1322)",
+      "net_inflow_b": 30.4,
+      "change_pct": 5.16
+    },
+    {
+      "rank": 17,
+      "sector": "综合电力设备商(BK1323)",
+      "net_inflow_b": 20.2,
+      "change_pct": 6.88
+    },
+    {
+      "rank": 21,
+      "sector": "火力发电(BK1377)",
+      "net_inflow_b": 14.9,
+      "change_pct": 3.27
+    },
+    {
+      "rank": 29,
+      "sector": "电网自动化设备(BK1309)",
+      "net_inflow_b": 9.3,
+      "change_pct": 3.14
+    }
+  ],
+  "next_day_plan": {
+    "sell": [
+      {
+        "stock": "滨化股份(601678)",
+        "time": "9:25竞价位",
+        "reason": "死钱无板块支撑"
+      }
+    ],
+    "hold": [
+      {
+        "stock": "大唐发电(601991)",
+        "stop": 7.2,
+        "reason": "6连板动量极强但板块降级"
+      }
+    ],
+    "buy_target": {
+      "sector": "综合电力设备商(BK1323)",
+      "reason": "刚起爆+6.88%，板块换手16.21%极活跃",
+      "max_capital": 2896.0,
+      "confirmed": false,
+      "will_scan_morning": true
+    }
+  },
+  "strategies_learned": [
+    "syf_quant-trading: 双均线交叉(金叉买/死叉卖)",
+    "syf_quant-trading: RSI均值回归(超卖30买/超买70卖)",
+    "Strat-LLM: Strict Mode风控，推理模型Free Mode最优",
+    "Strat-LLM: 标准模型需Strict Mode防高胜率陷阱"
+  ],
+  "data_sources": {
+    "market_data": "腾讯财经K线 + 东方财富API",
+    "sector_flow": "东方财富板块资金流向",
+    "strategy_repo": "github.com/tmacsyf/syf_quant-trading"
+  }
+}
