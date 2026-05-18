@@ -546,34 +546,64 @@ def sector_chase_filter(stock_name, sector_map):
     """
     检测该股所属板块是否当日暴涨(追顶风险)
     返回: (是否追顶风险, 板块名, 板块涨幅)
-    简化版: 用股票名关键词匹配板块
+
+    策略: 从东方财富板块资金流数据中, 用股票名关键词直接匹配板块名
+    板块名来自东财实时数据, 如"电信运营商"、"元件"、"自动化设备"等
     """
-    # 关键词→板块映射(简化)
-    kw_sector = {
-        '电力': ['电力', '发电', '能源', '电网', '电气'],
-        '电子': ['电子', '芯片', '半导体', '电路'],
-        '化工': ['化工', '化学', '材料', '化纤', '股份'],
-        '建筑': ['建筑', '建工', '工程', '电建', '能建'],
-        '通信': ['通信', '通讯', '5G', '光纤'],
-        '汽车': ['汽车', '汽配', '轮胎'],
-        '机械': ['机械', '设备', '重工'],
-        '医药': ['医药', '药业', '生物'],
-    }
+    if not sector_map:
+        return False, None, 0
 
-    matched_sector = None
-    for sector, keywords in kw_sector.items():
-        for kw in keywords:
-            if kw in stock_name:
-                matched_sector = sector
-                break
-        if matched_sector:
-            break
+    # 股票名关键词 → 板块名关键词 (按优先级)
+    stock_kw_to_sector_kw = [
+        # 通信/5G/电信
+        (['联通', '电信', '移动', '通信', '5G', '通讯', '光纤', '烽火', '长飞', '亨通', '中天'],
+         ['电信', '通信', '5G', '通讯', '光纤']),
+        # 电力/能源
+        (['电力', '发电', '能源', '电网', '电气', '风电', '光伏', '太阳能', '核能', '水电', '火电', '新能', '大唐', '华能', '华电'],
+         ['电力', '发电', '能源', '电网', '风电', '光伏']),
+        # 电子/半导体/芯片
+        (['电子', '芯片', '半导体', '电路', '晶圆', '封测', '集成', '海光', '中芯', '韦尔'],
+         ['电子', '芯片', '半导体', '电路', '集成']),
+        # 元件/PCB
+        (['元件', '电路板', 'PCB', '印制', '东山', '景旺', '崇达', '胜宏'],
+         ['元件', '电路板', 'PCB', '印制']),
+        # 汽车
+        (['汽车', '汽配', '轮胎', '电机', '方正', '凌云', '交运'],
+         ['汽车', '汽配', '轮胎', '电机']),
+        # 自动化/机械
+        (['机械', '设备', '重工', '自动化', '华工', '汇川', '机器'],
+         ['机械', '设备', '重工', '自动化']),
+        # 化工/材料
+        (['化工', '化学', '材料', '化纤', '石化', '油气', '石油', '炼化', '宝丰', '万华'],
+         ['化工', '化学', '材料', '化纤', '油气', '石油', '炼化']),
+        # 建筑/工程
+        (['建筑', '建工', '工程', '电建', '能建', '建材', '水泥', '管业', '青龙'],
+         ['建筑', '工程', '建材', '水泥', '专业工程']),
+        # 煤炭/矿业
+        (['煤炭', '煤业', '矿业', '神华', '中煤'],
+         ['煤炭', '矿业']),
+        # 广告/传媒/数字媒体
+        (['传媒', '数字', '广告', '影视', '广电', '出版', '营销'],
+         ['传媒', '数字', '广告', '影视', '广电', '出版', '营销']),
+        # 医药
+        (['医药', '药业', '生物', '制药', '医疗', '器械'],
+         ['医药', '药业', '生物', '医疗', '器械']),
+        # 环保/绿色
+        (['环保', '绿色', '节能', '生态', '环境', '再生'],
+         ['环保', '绿色', '节能']),
+        # 食品
+        (['食品', '乳业', '饮料', '啤酒', '白酒', '零食', '三只', '伊利', '蒙牛'],
+         ['食品', '饮料', '乳业']),
+    ]
 
-    if matched_sector and sector_map:
-        for sname, sdata in sector_map.items():
-            if matched_sector in sname or any(kw in sname for kw in kw_sector.get(matched_sector, [])):
-                if sdata['change_pct'] > SECTOR_CHASE_LIMIT:
-                    return True, sname, sdata['change_pct']
+    for name_kws, sector_kws in stock_kw_to_sector_kw:
+        if any(kw in stock_name for kw in name_kws):
+            # 在板块数据中查找匹配
+            for sname, sdata in sector_map.items():
+                if any(skw in sname for skw in sector_kws):
+                    if sdata['change_pct'] > SECTOR_CHASE_LIMIT:
+                        return True, sname, sdata['change_pct']
+            break  # 找到匹配的行业类别后停止
 
     return False, None, 0
 
@@ -685,7 +715,8 @@ def main():
               f"连阳:{ind['up_days']}天 | 连放量:{ind['consec_vol_up']}天")
         print(f"    5日:{ind['ret_5d']:+.1f}% | 10日:{ind['ret_10d']:+.1f}%")
         print(f"    ── 交易计划 ──")
-        print(f"    买入: {shares}手 = {shares*price*100:.0f}元 (占{CAPITAL*MAX_POSITION_PCT:.0f}%)")
+        pos_pct = shares * price * 100 / CAPITAL * 100
+        print(f"    买入: {shares}手 = {shares*price*100:.0f}元 (占{pos_pct:.0f}%)")
         print(f"    止损: {stop_loss_price:.2f} (亏损{max_loss:.0f}元)")
         print(f"    目标: {target:.2f} | 盈亏比: {rr:.1f}")
         if s['reasons']:
