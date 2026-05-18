@@ -1,0 +1,112 @@
+{
+  "snapshot_time": "2026-05-18T21:19:00+08:00",
+  "account": {
+    "original_capital": 3622.0,
+    "estimated_total_assets": 5054.0,
+    "total_return_pct": 39.5,
+    "total_return_amt": 1432.0
+  },
+  "positions": [
+    {
+      "name": "大唐发电",
+      "code": "601991",
+      "shares": 100,
+      "cost": 7.26,
+      "current": 7.93,
+      "pnl_pct": 9.23,
+      "pnl_amt": 67,
+      "signals": {
+        "rsi": 90,
+        "kdj_j": 85,
+        "bb_pos_pct": 98,
+        "pos_60_pct": 96,
+        "ret_5d": 18.4,
+        "ret_10d": 90.6,
+        "vol_ratio": 2.2,
+        "macd_signal": "多头",
+        "decision": "SELL_TAKE_PROFIT",
+        "reason": "RSI 90极度超买 + 10日+90% + 利润锁定"
+      }
+    },
+    {
+      "name": "滨化股份",
+      "code": "601678",
+      "shares": 100,
+      "cost": 5.07,
+      "current": 6.39,
+      "pnl_pct": 26.04,
+      "pnl_amt": 132,
+      "signals": {
+        "rsi": 79,
+        "kdj_j": 89,
+        "bb_pos_pct": 140,
+        "pos_60_pct": 100,
+        "ret_5d": 28.8,
+        "ret_10d": 19.4,
+        "vol_ratio": 1.7,
+        "macd_signal": "多头",
+        "decision": "SELL_TAKE_PROFIT",
+        "reason": "BB突破上轨 + 26%利润 + 60日高位"
+      }
+    }
+  ],
+  "sector_capital_flow_top10": [
+    { "rank": 1, "sector": "元件", "change_pct": 2.34, "net_inflow_b": 42.3 },
+    { "rank": 2, "sector": "印制电路板", "change_pct": 2.20, "net_inflow_b": 36.4 },
+    { "rank": 3, "sector": "电子", "change_pct": 1.15, "net_inflow_b": 29.8 },
+    { "rank": 4, "sector": "自动化设备", "change_pct": 1.95, "net_inflow_b": 26.7 },
+    { "rank": 5, "sector": "数字芯片设计", "change_pct": 2.08, "net_inflow_b": 24.9 },
+    { "rank": 6, "sector": "电信运营商", "change_pct": 5.25, "net_inflow_b": 21.7 },
+    { "rank": 7, "sector": "通信服务", "change_pct": 2.00, "net_inflow_b": 21.6 },
+    { "rank": 8, "sector": "其他专业工程", "change_pct": 0.71, "net_inflow_b": 12.5 },
+    { "rank": 9, "sector": "半导体设备", "change_pct": -0.05, "net_inflow_b": 12.4 },
+    { "rank": 10, "sector": "激光设备", "change_pct": 2.65, "net_inflow_b": 11.6 }
+  ],
+  "sector_rotation_signal": "电力设备→电子/半导体切换确认。电力相关板块全部跌出TOP10。",
+  "next_day_plan": {
+    "sell": [
+      {
+        "stock": "大唐发电(601991)",
+        "time": "9:25竞价位",
+        "reason": "RSI 90极度超买 + 10日+90.6%, 锁定+9%利润"
+      },
+      {
+        "stock": "滨化股份(601678)",
+        "time": "9:25竞价位",
+        "reason": "BB 140%突破上轨 + 60日高位, 锁定+26%利润"
+      }
+    ],
+    "buy_target": {
+      "stock": "上海电气(601727)",
+      "score": 76,
+      "price": 9.02,
+      "shares": 400,
+      "cost": 3608,
+      "stop": 8.84,
+      "target": 9.33,
+      "rr_ratio": 1.7,
+      "reasons": ["MACD多头", "温和放量2.1x", "RSI 65健康", "60日中枢68%"]
+    },
+    "backup_target": {
+      "stock": "凌云股份(600480)",
+      "score": 58,
+      "price": 11.82,
+      "shares": 300,
+      "cost": 3546,
+      "stop": 11.58,
+      "target": 12.40,
+      "rr_ratio": 2.5
+    }
+  },
+  "risk_parameters": {
+    "max_daily_loss_pct": 2.0,
+    "max_daily_loss_amt": 101,
+    "hard_stop_rule": "2%硬止损不可移动",
+    "profit_lock_rule": "盈利>5%移动止盈到成本+1%, >8%直接止盈"
+  },
+  "data_sources": {
+    "kline": "腾讯财经 web.ifzq.gtimg.cn",
+    "realtime": "东方财富 push2.eastmoney.com",
+    "sector_flow": "东方财富 data.eastmoney.com"
+  }
+}

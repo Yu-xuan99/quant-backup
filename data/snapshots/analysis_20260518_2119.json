@@ -1,0 +1,319 @@
+{
+  "timestamp": "2026-05-18T21:19:10.576809",
+  "total_capital": 3622.0,
+  "estimated_total_assets": 5054.0,
+  "positions": [
+    {
+      "name": "大唐发电",
+      "code": "601991",
+      "cost": 7.26,
+      "shares": 100,
+      "current": 7.93,
+      "pnl_pct": 9.2287,
+      "pnl_amt": 67.0,
+      "stop_loss": 7.11,
+      "trailing_stop": 7.77,
+      "decision": "SELL_TAKE_PROFIT",
+      "action_detail": "盈利9%达标止盈",
+      "indicators": {
+        "ma5": 7.424,
+        "ma10": 6.253,
+        "ma20": 5.1585,
+        "ma60": 4.4093,
+        "vol_ratio": 2.2442,
+        "ret_3d": 10.1389,
+        "ret_5d": 18.3582,
+        "ret_10d": 90.625,
+        "pos_60": 95.7778,
+        "bb_pos": 0.9825,
+        "bb_upper": 8.0305,
+        "bb_lower": 2.2865,
+        "macd_signal": "多头",
+        "dif": 0.9389,
+        "dea": 0.5643,
+        "rsi": 89.9142,
+        "kdj_k": 64.9123,
+        "kdj_d": 54.9708,
+        "kdj_j": 84.7953,
+        "atr": 0.4743,
+        "resistance_20": 8.12,
+        "support_20": 3.84,
+        "pct_from_ma5": 6.8157,
+        "pct_from_resistance": -2.3399,
+        "up_days": 2,
+        "down_days": 0,
+        "latest": 7.93
+      }
+    },
+    {
+      "name": "滨化股份",
+      "code": "601678",
+      "cost": 5.07,
+      "shares": 100,
+      "current": 6.39,
+      "pnl_pct": 26.0355,
+      "pnl_amt": 132.0,
+      "stop_loss": 4.97,
+      "trailing_stop": 6.26,
+      "decision": "SELL_TAKE_PROFIT",
+      "action_detail": "盈利26%达标止盈",
+      "indicators": {
+        "ma5": 5.502,
+        "ma10": 5.343,
+        "ma20": 5.238,
+        "ma60": 5.2508,
+        "vol_ratio": 1.6959,
+        "ret_3d": 21.0227,
+        "ret_5d": 28.8306,
+        "ret_10d": 19.4393,
+        "pos_60": 100.0,
+        "bb_pos": 1.4034,
+        "bb_upper": 5.8756,
+        "bb_lower": 4.6004,
+        "macd_signal": "多头",
+        "dif": 0.1349,
+        "dea": 0.0271,
+        "rsi": 79.1469,
+        "kdj_k": 66.6667,
+        "kdj_d": 55.5556,
+        "kdj_j": 88.8889,
+        "atr": 0.2221,
+        "resistance_20": 6.39,
+        "support_20": 4.93,
+        "pct_from_ma5": 16.1396,
+        "pct_from_resistance": 0.0,
+        "up_days": 4,
+        "down_days": 0,
+        "latest": 6.39
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "name": "上海电气",
+      "code": "601727",
+      "price": 9.02,
+      "change_pct": 0,
+      "score": 76,
+      "reasons": [
+        "短期上升趋势",
+        "站上MA5",
+        "MA5>MA10",
+        "温和放量(2.1x)",
+        "近3日正动量",
+        "MACD多头",
+        "RSI健康(65)",
+        "高位区(68%)",
+        "可买4手"
+      ],
+      "shares": 4,
+      "cost_total": 3608.0,
+      "stop_price": 8.8396,
+      "max_loss": 72.16,
+      "target": 9.33,
+      "rr_ratio": 1.7184
+    },
+    {
+      "name": "凌云股份",
+      "code": "600480",
+      "price": 11.82,
+      "change_pct": 0,
+      "score": 58,
+      "reasons": [
+        "短期上升趋势",
+        "MA5>MA10",
+        "量能正常(1.3x)",
+        "MACD多头",
+        "RSI健康(66)",
+        "高位区(82%)",
+        "可买3手"
+      ],
+      "shares": 3,
+      "cost_total": 3546.0,
+      "stop_price": 11.5836,
+      "max_loss": 70.92,
+      "target": 12.4,
+      "rr_ratio": 2.4535
+    },
+    {
+      "name": "中国电建",
+      "code": "601669",
+      "price": 5.78,
+      "change_pct": 0,
+      "score": 41,
+      "reasons": [
+        "MA5>MA10",
+        "MACD多头",
+        "RSI健康(45)",
+        "低位(19%)",
+        "可买6手"
+      ],
+      "shares": 6,
+      "cost_total": 3468.0,
+      "stop_price": 5.6644,
+      "max_loss": 69.36,
+      "target": 6.15,
+      "rr_ratio": 3.2007
+    },
+    {
+      "name": "宝胜股份",
+      "code": "600973",
+      "price": 7.41,
+      "change_pct": 0,
+      "score": 36,
+      "reasons": [
+        "MA5>MA10",
+        "量能正常(1.4x)",
+        "RSI健康(49)",
+        "高位区(67%)",
+        "可买4手"
+      ],
+      "shares": 4,
+      "cost_total": 2964.0,
+      "stop_price": 7.2618,
+      "max_loss": 59.28,
+      "target": 8.06,
+      "rr_ratio": 4.386
+    },
+    {
+      "name": "鸿博股份",
+      "code": "002229",
+      "price": 17.16,
+      "change_pct": 0,
+      "score": 30,
+      "reasons": [
+        "RSI健康(41)",
+        "价格中枢(35%)",
+        "可买2手"
+      ],
+      "shares": 2,
+      "cost_total": 3432.0,
+      "stop_price": 16.8168,
+      "max_loss": 68.64,
+      "target": 20.18,
+      "rr_ratio": 8.7995
+    }
+  ],
+  "sector_flow": [
+    {
+      "code": "BK0459",
+      "name": "元件",
+      "change_pct": 2.34,
+      "net_inflow": 42.3231,
+      "main_inflow": 39.0261,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1340",
+      "name": "印制电路板",
+      "change_pct": 2.2,
+      "net_inflow": 36.4128,
+      "main_inflow": 33.0824,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1201",
+      "name": "电子",
+      "change_pct": 1.15,
+      "net_inflow": 29.8248,
+      "main_inflow": 47.8469,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1237",
+      "name": "自动化设备",
+      "change_pct": 1.95,
+      "net_inflow": 26.6595,
+      "main_inflow": 31.4876,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1331",
+      "name": "数字芯片设计",
+      "change_pct": 2.08,
+      "net_inflow": 24.8629,
+      "main_inflow": 29.5307,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1587",
+      "name": "电信运营商",
+      "change_pct": 5.25,
+      "net_inflow": 21.7161,
+      "main_inflow": 16.4385,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK0736",
+      "name": "通信服务",
+      "change_pct": 2.0,
+      "net_inflow": 21.6254,
+      "main_inflow": 9.6858,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1477",
+      "name": "其他专业工程",
+      "change_pct": 0.71,
+      "net_inflow": 12.503,
+      "main_inflow": 12.0701,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1326",
+      "name": "半导体设备",
+      "change_pct": -0.05,
+      "net_inflow": 12.3835,
+      "main_inflow": 6.0924,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1409",
+      "name": "激光设备",
+      "change_pct": 2.65,
+      "net_inflow": 11.5834,
+      "main_inflow": 23.6387,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK0481",
+      "name": "汽车零部件",
+      "change_pct": -0.43,
+      "net_inflow": 11.2607,
+      "main_inflow": 1.2406,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1248",
+      "name": "专业工程",
+      "change_pct": 0.06,
+      "net_inflow": 11.1675,
+      "main_inflow": 10.8906,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK0464",
+      "name": "石油石化",
+      "change_pct": 0.57,
+      "net_inflow": 11.0066,
+      "main_inflow": 4.95,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1407",
+      "name": "工控设备",
+      "change_pct": 0.78,
+      "net_inflow": 9.1491,
+      "main_inflow": 3.8503,
+      "turnover": 0.0
+    },
+    {
+      "code": "BK1592",
+      "name": "通信线缆及配套",
+      "change_pct": 4.2,
+      "net_inflow": 8.5212,
+      "main_inflow": 16.5521,
+      "turnover": 0.0
+    }
+  ]
+}
