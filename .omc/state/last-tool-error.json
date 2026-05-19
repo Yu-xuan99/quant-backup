@@ -1,0 +1,7 @@
+{
+  "tool_name": "mcp__chrome-devtools__evaluate_script",
+  "tool_input_preview": "{\"function\":\"() => {\\n  const tables = document.querySelectorAll('table');\\n  const results = [];\\n  for (const table of tables) {\\n    const headers = [];\\n    table.querySelectorAll('thead th, thead...",
+  "error": "Error: headers is not defined",
+  "timestamp": "2026-05-19T05:03:18.441Z",
+  "retry_count": 1
+}

@@ -1,0 +1,179 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779112461657,
+  "projectRoot": "C:\\Users\\34077\\Desktop\\quant-backup",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "analysis": {
+      "path": "analysis",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1779112461638,
+      "keyFiles": [
+        "2026-05-12_走势图.png",
+        "2026-05-13_走势图.png",
+        "analyze_20260518.py"
+      ]
+    },
+    "data": {
+      "path": "data",
+      "purpose": "Data files",
+      "fileCount": 0,
+      "lastAccessed": 1779112461639,
+      "keyFiles": []
+    },
+    "strategies": {
+      "path": "strategies",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1779112461639,
+      "keyFiles": [
+        "scanner_v3.py",
+        "scan_v3_20260518_2133.json",
+        "_market_snapshot.json"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "strategies\\scanner_v3.py",
+      "accessCount": 23,
+      "lastAccessed": 1779166760356,
+      "type": "file"
+    },
+    {
+      "path": "strategies\\scanner_bottom.py",
+      "accessCount": 7,
+      "lastAccessed": 1779165557370,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\bottom_validation_week1.md",
+      "accessCount": 5,
+      "lastAccessed": 1779166939366,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\session_20260513_full.md",
+      "accessCount": 2,
+      "lastAccessed": 1779109993568,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\trading_plan_20260514.md",
+      "accessCount": 2,
+      "lastAccessed": 1779109993617,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\trading_plan_20260519_final.md",
+      "accessCount": 2,
+      "lastAccessed": 1779165544986,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\trading_plan_20260519.md",
+      "accessCount": 2,
+      "lastAccessed": 1779165545051,
+      "type": "file"
+    },
+    {
+      "path": "analysis\\analyze_20260518.py",
+      "accessCount": 2,
+      "lastAccessed": 1779165545066,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\bottom_fishing_analysis_20260518.md",
+      "accessCount": 2,
+      "lastAccessed": 1779165545086,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\state_20260518_2210.json",
+      "accessCount": 2,
+      "lastAccessed": 1779165557381,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\state_20260513_1745.json",
+      "accessCount": 1,
+      "lastAccessed": 1779109993561,
+      "type": "file"
+    },
+    {
+      "path": "data\\11股票分析\\position_monitor.py",
+      "accessCount": 1,
+      "lastAccessed": 1779110022360,
+      "type": "file"
+    },
+    {
+      "path": "data\\11股票分析\\market_scanner.py",
+      "accessCount": 1,
+      "lastAccessed": 1779110022427,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\state_20260518_2119.json",
+      "accessCount": 1,
+      "lastAccessed": 1779110486648,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\scan_20260513_1810.json",
+      "accessCount": 1,
+      "lastAccessed": 1779110506532,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\trading_plan_20260519_v3.md",
+      "accessCount": 1,
+      "lastAccessed": 1779112122710,
+      "type": "file"
+    },
+    {
+      "path": "strategies\\_market_snapshot.json",
+      "accessCount": 1,
+      "lastAccessed": 1779165557353,
+      "type": "file"
+    },
+    {
+      "path": "strategies\\bottom_scan_20260519_1257.json",
+      "accessCount": 1,
+      "lastAccessed": 1779166715982,
+      "type": "file"
+    },
+    {
+      "path": "data\\snapshots\\trading_plan_20260520.md",
+      "accessCount": 1,
+      "lastAccessed": 1779167334974,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

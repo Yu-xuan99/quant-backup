@@ -329,6 +329,10 @@ def must_pass_filter(stock, ind):
     """
     failures = []
 
+    # 0. 数据不足 → 直接淘汰
+    if ind is None:
+        failures.append("K线数据不足")
+
     # 1. 剔除涨停股 (买不到)
     if stock['change_pct'] > 9.5:
         failures.append("已涨停")
@@ -349,10 +353,6 @@ def must_pass_filter(stock, ind):
     # 4. 量比过低 → 无资金关注
     if ind['vol_ratio'] < 0.5:
         failures.append(f"极度缩量({ind['vol_ratio']:.1f}x)")
-
-    # 5. 数据不足
-    if ind is None:
-        failures.append("K线数据不足")
 
     return len(failures) == 0, failures
 

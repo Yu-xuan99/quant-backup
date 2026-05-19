@@ -1,0 +1,57 @@
+{
+  "snapshot_time": "2026-05-19T13:09:27.736365",
+  "account": {
+    "original_capital": 3622.0,
+    "estimated_cash": 5054.0,
+    "status": "空仓(假设已清仓)"
+  },
+  "may19_market": {
+    "shanghai": {
+      "close": 4132.46,
+      "chg_pct": 0.02
+    },
+    "shenzhen": {
+      "close": 15408.72,
+      "chg_pct": -0.78
+    },
+    "chinext": {
+      "close": 3867.59,
+      "chg_pct": -1.21
+    }
+  },
+  "may19_positions": {
+    "大唐发电": {
+      "close": 8.35,
+      "chg": 5.3,
+      "rsi": 93,
+      "status": "极度超买"
+    },
+    "滨化股份": {
+      "close": 6.16,
+      "chg": -3.6,
+      "rsi": 72,
+      "status": "放量下跌"
+    }
+  },
+  "may19_sector_top3": [
+    {
+      "name": "电力",
+      "chg": 3.03,
+      "inflow": 35.15
+    },
+    {
+      "name": "公用事业",
+      "chg": 2.29,
+      "inflow": 33.75
+    },
+    {
+      "name": "火力发电",
+      "chg": 4.07,
+      "inflow": 16.22
+    }
+  ],
+  "validation_day1": "0/8触发放量收阳，全缩量，MA5全下行",
+  "bottom_scanner": "72只全在60分以下，无买入信号",
+  "next_day_strategy": "继续空仓等待",
+  "key_lesson": "板块轮动判断错误—电力未退潮，电子通信未接棒"
+}
